@@ -2,7 +2,9 @@
 
 I build small open-source tools that remove real, daily friction for [Claude Code](https://code.claude.com) users.
 
-The way they get built is the part I care most about: I run a continuous loop — **study open-source repos and AI tooling → validate what actually works against my own heavy, multi-session workflow → fold the verified lessons into a personal automation system → publish the reusable parts as tools anyone can use.** Every improvement is expected to survive beyond the conversation that produced it.
+The way they get built matters more than any single repo: I run a continuous loop — **study open-source repos and AI tooling → validate what actually works against my own heavy, multi-session workflow → fold the verified lessons into a continuously improving engineering system → publish the reusable parts as tools anyone can use.** House rule: every lesson must end up as a file, a test, or a tool — if it only lives in a chat, it doesn't exist.
+
+When Claude Code ships a new capability, my default pattern is: try it against real work, find the friction, publish the tool that removes it. usage-guard's real-quota mode exists because Claude Code started exposing `rate_limits` to status lines — the capability appeared, and the tool followed.
 
 ## Claude Code tools I maintain
 
@@ -12,7 +14,16 @@ The way they get built is the part I care most about: I run a continuous loop �
 | [claude-session-triage](https://github.com/eltonylfgi-blip/claude-session-triage) | 15 chats open across projects, 3 waiting on you — which 3? One triage panel of every idle session and what it was waiting on |
 | [claude-usage-pacer](https://github.com/eltonylfgi-blip/claude-usage-pacer) | Burning the weekly quota before the reset — a single-file, local-first pacing app |
 
-Zero/near-zero dependencies, local-first, MIT, no network calls in anything that runs inside your session. Both plugins are submitted to [awesome-claude-plugins](https://github.com/ComposioHQ/awesome-claude-plugins/pulls?q=is%3Apr+author%3Aeltonylfgi-blip).
+All built to the same six rules — local-first, zero deps, fail-open, warn-don't-block, honest READMEs, one real friction per tool: **[DESIGN_PRINCIPLES.md](https://github.com/eltonylfgi-blip/claude-code-usage-guard/blob/main/DESIGN_PRINCIPLES.md)**. Both plugins are submitted to [awesome-claude-plugins](https://github.com/ComposioHQ/awesome-claude-plugins/pulls?q=is%3Apr+author%3Aeltonylfgi-blip).
+
+## Next six months
+
+Concrete and checkable, not aspirational:
+
+- **Harden usage-guard's real-quota capture** across real-world setups (OS × plan × status-line configs) — it's the top item on the [public roadmap](https://github.com/eltonylfgi-blip/claude-code-usage-guard/blob/main/ROADMAP.md), and each report becomes a fixture and a test.
+- **Publish session-triage to npm** so `npx claude-session-triage` works without the `github:` prefix.
+- **Land the suite in community lists and marketplaces** (PRs already open).
+- **Keep extracting.** The workflow keeps surfacing friction; the next tools come from wherever it hurts next. I ship weekly.
 
 ## Other tooling
 
@@ -20,7 +31,7 @@ Zero/near-zero dependencies, local-first, MIT, no network calls in anything that
 
 ## Learning in public
 
-- [madre-arquitectura](https://github.com/eltonylfgi-blip/madre-arquitectura) — the architecture and *open pain points* of the personal automation system behind all of the above (in Spanish, with an English TL;DR). I publish the problems, not just the wins, to collect feedback and repo recommendations via Issues.
+- [madre-arquitectura](https://github.com/eltonylfgi-blip/madre-arquitectura) — the architecture and *open pain points* of the engineering system behind all of the above (in Spanish, with an English TL;DR). I publish the problems, not just the wins, to collect feedback and repo recommendations via Issues.
 
 ---
 
