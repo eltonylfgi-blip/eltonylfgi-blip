@@ -14,16 +14,16 @@ When Claude Code ships a new capability, my default pattern is: try it against r
 | [claude-session-triage](https://github.com/eltonylfgi-blip/claude-session-triage) | 15 chats open across projects, 3 waiting on you — which 3? One triage panel of every idle session and what it was waiting on |
 | [claude-usage-pacer](https://github.com/eltonylfgi-blip/claude-usage-pacer) | Burning the weekly quota before the reset — a single-file, local-first pacing app |
 
-All built to the same six rules — local-first, zero deps, fail-open, warn-don't-block, honest READMEs, one real friction per tool: **[DESIGN_PRINCIPLES.md](https://github.com/eltonylfgi-blip/claude-code-usage-guard/blob/main/DESIGN_PRINCIPLES.md)**. Both plugins are submitted to [awesome-claude-plugins](https://github.com/ComposioHQ/awesome-claude-plugins/pulls?q=is%3Apr+author%3Aeltonylfgi-blip).
+All built under the same six constraints — local-first, zero deps, fail-open, warn-don't-block, honest READMEs, one real friction per tool: **[ENGINEERING_PRINCIPLES.md](https://github.com/eltonylfgi-blip/claude-code-usage-guard/blob/main/ENGINEERING_PRINCIPLES.md)**, each with where it's implemented. Both plugins are submitted to [awesome-claude-plugins](https://github.com/ComposioHQ/awesome-claude-plugins/pulls?q=is%3Apr+author%3Aeltonylfgi-blip).
 
-## Next six months
+## Currently exploring
 
-Concrete and checkable, not aspirational:
+Direction, not promises — this is where the workflow is pointed right now:
 
-- **Harden usage-guard's real-quota capture** across real-world setups (OS × plan × status-line configs) — it's the top item on the [public roadmap](https://github.com/eltonylfgi-blip/claude-code-usage-guard/blob/main/ROADMAP.md), and each report becomes a fixture and a test.
-- **Publish session-triage to npm** so `npx claude-session-triage` works without the `github:` prefix.
-- **Land the suite in community lists and marketplaces** (PRs already open).
-- **Keep extracting.** The workflow keeps surfacing friction; the next tools come from wherever it hurts next. I ship weekly.
+- **Hardening usage-guard's real-quota capture** across real-world setups (OS × plan × status-line configs) — top of the [public roadmap](https://github.com/eltonylfgi-blip/claude-code-usage-guard/blob/main/ROADMAP.md); each field report becomes a fixture and a test.
+- **Lower-friction installs** — publishing session-triage to npm so `npx claude-session-triage` works without the `github:` prefix.
+- **Distribution** — landing the suite in community lists and marketplaces (PRs already open).
+- **Whatever friction surfaces next** — the workflow keeps finding it; I ship weekly.
 
 ## Other tooling
 
